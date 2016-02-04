@@ -50,11 +50,11 @@ https://raw.github.com/Koelli91/imgCrossfade/master/tests/crossfade.html
 ###Options:
 ```js
 $("#cycler").imgCrossfade({
-	fading: 'fast'|**'medium'**|'slow'|*<any number in ms>*
-	interval: *<any number in ms>*
+	fading: 'fast'|'medium'|'slow'|<any number in ms>
+	interval: <any number in ms>
 });
 /*
-* **fading**: how long the crossfade should take (Default: **'medium'** (= 1500 ms))
-* **interval**: how often the image should change (Default: **7000** ms)
+* fading: how long the crossfade should take (Default: 'medium' (= 1500 ms))
+* interval: how often the image should change (Default: 7000 ms)
 */
 ```
