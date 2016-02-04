@@ -37,7 +37,7 @@ $(document).ready(function() {
 ```
 
 ####View in action:
-https://www.kevinkoellmann.de/imgCrossfade/
+[https://www.kevinkoellmann.de/imgCrossfade/](https://www.kevinkoellmann.de/imgCrossfade/#action)
 ## 
 ###Features:
 ```
