@@ -37,7 +37,7 @@ $(document).ready(function() {
 ```
 
 ####View in action:
-https://raw.github.com/Koelli91/imgCrossfade/master/tests/crossfade.html
+https://www.kevinkoellmann.de/imgCrossfade/
 ## 
 ###Features:
 ```
