@@ -1,4 +1,4 @@
-(function ( $ ) {,
+(function ( $ ) {
 	
 	$.fn.imgCrossfade = function( options ) {
 		
