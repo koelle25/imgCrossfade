@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
+
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <title>Imgcrossfade by Koelli91</title>
+  </head>
+
+  <body>
+    <header>
+      <div class="inner">
+        <h1>Imgcrossfade</h1>
+        <h2>A jQuery Plugin to easily crossfade through images</h2>
+        <a href="https://github.com/Koelli91/imgCrossfade" class="button"><small>View project on</small> GitHub</a>
+      </div>
+    </header>
+
+    <div id="content-wrapper">
+      <div class="inner clearfix">
+        <section id="main-content">
+          <p><img src="https://github.com/Koelli91/imgCrossfade/raw/master/tests/banner.png" alt="ScreenShot"></p>
+
+<p>imgCrossfade v0.1 / 03-02-2016</p>
+
+<h5>
+<a id="a-jquery-plugin-to-easily-crossfade-through-images-same-dimensions-required" class="anchor" href="#a-jquery-plugin-to-easily-crossfade-through-images-same-dimensions-required" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>A jQuery Plugin to easily crossfade through images (same dimensions required)</h5>
+
+<p>Kevin Köllmann (Koelli91)
+licensed the <a href="https://github.com/Koelli91/imgCrossfade/raw/master/LICENSE">GPL-3.0</a></p>
+
+<h1>
+<a id="usage" class="anchor" href="#usage" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Usage</h1>
+
+<h4>
+<a id="include" class="anchor" href="#include" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Include:</h4>
+
+<div class="highlight highlight-text-html-basic"><pre>&lt;<span class="pl-ent">script</span> <span class="pl-e">src</span>=<span class="pl-s"><span class="pl-pds">"</span>js/imgCrossfade.min.js<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">script</span>&gt;</pre></div>
+
+<h4>
+<a id="html" class="anchor" href="#html" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>HTML:</h4>
+
+<div class="highlight highlight-text-html-basic"><pre>&lt;<span class="pl-ent">div</span> <span class="pl-e">id</span>=<span class="pl-s"><span class="pl-pds">"</span>cycler<span class="pl-pds">"</span></span>&gt;
+    &lt;<span class="pl-ent">img</span> <span class="pl-e">src</span>=<span class="pl-s"><span class="pl-pds">"</span>one.jpg<span class="pl-pds">"</span></span> /&gt;
+    &lt;<span class="pl-ent">img</span> <span class="pl-e">src</span>=<span class="pl-s"><span class="pl-pds">"</span>two.jpg<span class="pl-pds">"</span></span> /&gt;
+    ...
+&lt;/<span class="pl-ent">div</span>&gt;</pre></div>
+
+<h4>
+<a id="js" class="anchor" href="#js" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>JS:</h4>
+
+<div class="highlight highlight-source-js"><pre><span class="pl-en">$</span>(<span class="pl-c1">document</span>).<span class="pl-en">ready</span>(<span class="pl-k">function</span>() {
+    <span class="pl-en">$</span>(<span class="pl-s"><span class="pl-pds">"</span>#cycler<span class="pl-pds">"</span></span>).<span class="pl-en">imgCrossfade</span>();
+});</pre></div>
+
+<h4>
+<a id="css" class="anchor" href="#css" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>CSS:</h4>
+
+<div class="highlight highlight-source-css"><pre><span class="pl-e">#cycler</span> {
+    <span class="pl-c1"><span class="pl-c1">width</span></span>: <span class="pl-c1">227<span class="pl-k">px</span></span>; <span class="pl-c">/* the common width of the images */</span>
+    <span class="pl-c1"><span class="pl-c1">max-width</span></span>: <span class="pl-c1">100<span class="pl-k">%</span></span>; <span class="pl-c">/* for responsiveness - choose whatever max-width you'd like */</span>
+}</pre></div>
+
+<h4>
+<a id="view-in-action" class="anchor" href="#view-in-action" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>View in action:</h4>
+
+<p><a href="https://www.kevinkoellmann.de/imgCrossfade/#action">https://www.kevinkoellmann.de/imgCrossfade/</a></p>
+
+<h3>
+<a id="features" class="anchor" href="#features" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Features:</h3>
+
+<pre><code>    - Bootstrap-Compatible
+    - Lightweight: ~1 KiB (minified)
+    - Responsive
+    - All browsers (incl. IE6)
+</code></pre>
+
+<h3>
+<a id="options" class="anchor" href="#options" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Options:</h3>
+
+<div class="highlight highlight-source-js"><pre><span class="pl-en">$</span>(<span class="pl-s"><span class="pl-pds">"</span>#cycler<span class="pl-pds">"</span></span>).<span class="pl-en">imgCrossfade</span>({
+    fading<span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">'</span>fast<span class="pl-pds">'</span></span><span class="pl-k">|</span><span class="pl-s"><span class="pl-pds">'</span>medium<span class="pl-pds">'</span></span><span class="pl-k">|</span><span class="pl-s"><span class="pl-pds">'</span>slow<span class="pl-pds">'</span></span><span class="pl-k">|</span><span class="pl-k">&lt;</span>any number <span class="pl-k">in</span> ms<span class="pl-k">&gt;</span>
+    interval<span class="pl-k">:</span> <span class="pl-k">&lt;</span>any number <span class="pl-k">in</span> ms<span class="pl-k">&gt;</span>
+});
+<span class="pl-c">/*</span>
+<span class="pl-c">* fading: how long the crossfade should take (Default: 'medium' (= 1500 ms))</span>
+<span class="pl-c">* interval: how often the image should change (Default: 7000 ms)</span>
+<span class="pl-c">*/</span></pre></div>
+        </section>
+
+        <aside id="sidebar">
+          <a href="https://github.com/Koelli91/imgCrossfade/zipball/master" class="button">
+            <small>Download</small>
+            .zip file
+          </a>
+          <a href="https://github.com/Koelli91/imgCrossfade/tarball/master" class="button">
+            <small>Download</small>
+            .tar.gz file
+          </a>
+
+          <p class="repo-owner"><a href="https://github.com/Koelli91/imgCrossfade"></a> is maintained by <a href="https://github.com/Koelli91">Koelli91</a>.</p>
+
+          <p>This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the Architect theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.</p>
+        </aside>
+      </div>
+    </div>
+
+  
+  </body>
+</html>
