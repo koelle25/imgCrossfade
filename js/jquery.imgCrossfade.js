@@ -54,4 +54,51 @@
 			}, settings.interval);
 		});
 	}
+	
+	$.fn.bgimgCrossfade = function( options ) {
+		
+		function injectStyles( fading ) {
+			
+			var styles =
+"<style>\n\
+	.cf-bg-container {\n\
+		-webkit-transition: background-image " + fading + "ms ease-in;\n\
+		-moz-transition: background-image " + fading + "ms ease-in;\n\
+		-o-transition: background-image " + fading + "ms ease-in;\n\
+		transition: background-image " + fading + "ms ease-in;\n\
+	}\n\
+	.cf-bg-container img.cf-bg {\n\
+		display: none;\n\
+	}\n\
+</style>";
+			$('head').append(styles);
+		}
+		
+		var settings = $.extend({
+			fading: 'medium',
+			interval: 7000
+		}, options);
+		
+		settings.fading = ( $.isNumeric(settings.fading) ? settings.fading : settings.fading == 'fast' ? 750 : settings.fading == 'slow' ? 2500 : 1500 );
+		if ( settings.interval < settings.fading ) settings.interval = settings.fading;
+		console.log(settings.fading + "ms");
+		
+		injectStyles( settings.fading );
+		
+		return this.each(function() {
+			var cycler = $(this);
+			cycler.addClass('cf-bg-container');
+			cycler.find('img.cf-bg:first').addClass('cf-active');
+
+			window.setInterval(function() {
+				var active = cycler.find('.cf-active');
+				var next = (active.next('img.cf-bg').length > 0 ? active.next('img.cf-bg') : cycler.find('img.cf-bg').first());
+				var src = 'url(' + next.prop('src') + ')';
+				cycler.css('background-image', src); // set the next image as background-image
+				active.removeClass('cf-active');
+				next.addClass('cf-active');
+			}, settings.interval);
+		});
+	}
+	
 }( jQuery ));
