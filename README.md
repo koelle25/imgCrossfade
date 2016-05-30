@@ -67,7 +67,8 @@ For both (standard and background-images):
 ```
 ###Known Bugs:
 ```
-	- background-image-transition currently only works in Chrome (other browsers just switch the background-image instantly after configured interval)
+	- background-image-transition currently only works in Webkit-Browsers (Chrome and Safari)
+	(IE/Edge & FF just switch the background-image instantly after configured interval)
 ```
  
 ###Options:
