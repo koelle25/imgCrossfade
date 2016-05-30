@@ -81,7 +81,6 @@
 		
 		settings.fading = ( $.isNumeric(settings.fading) ? settings.fading : settings.fading == 'fast' ? 750 : settings.fading == 'slow' ? 2500 : 1500 );
 		if ( settings.interval < settings.fading ) settings.interval = settings.fading;
-		console.log(settings.fading + "ms");
 		
 		injectStyles( settings.fading );
 		
