@@ -1,6 +1,6 @@
 ![ScreenShot](https://github.com/Koelli91/imgCrossfade/raw/master/tests/banner.png)
 
-imgCrossfade v0.1 / 03-02-2016
+imgCrossfade v0.2 / 30-05-2016
 #####A jQuery Plugin to easily crossfade through images (same dimensions required)
 Kevin Köllmann (Koelli91)
 licensed the [GPL-3.0](https://github.com/Koelli91/imgCrossfade/raw/master/LICENSE)
