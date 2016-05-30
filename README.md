@@ -13,22 +13,41 @@ licensed the [GPL-3.0](https://github.com/Koelli91/imgCrossfade/raw/master/LICEN
 ```
 
 ####HTML:
+For "Standard" Images:
 ```html
 <div id="cycler">
-	<img src="one.jpg" />
-	<img src="two.jpg" />
+	<img src="one.jpg" class="cf" />
+	<img src="two.jpg" class="cf" />
 	...
 </div>
 ```
 
+For Background-Images (the css background-image-property will be applied to the "cycler"):
+```html
+<div id="cycler">
+	<img src="one.jpg" class="cf-bg" />
+	<img src="two.jpg" class="cf-bg" />
+	...
+</div>
+```
+> The images itself will be completely hidden (_display: none_), so you don't have to worry about your layout.
+
 ####JS:
+For "Standard" Images:
 ```js
 $(document).ready(function() {
 	$("#cycler").imgCrossfade();
 });
 ```
+For Background-Images:
+```js
+$(document).ready(function() {
+	$("#cycler").bgimgCrossfade();
+});
+```
 
 ####CSS:
+For both (standard and background-images):
 ```css
 #cycler {
 	width: 227px; /* the common width of the images */
