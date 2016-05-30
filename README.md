@@ -61,9 +61,13 @@ For both (standard and background-images):
 ###Features:
 ```
 	- Bootstrap-Compatible
-	- Lightweight: ~1 KiB (minified)
+	- Lightweight: ~2 KiB (minified)
 	- Responsive
 	- All browsers (incl. IE6)
+```
+###Known Bugs:
+```
+	- background-image-transition currently only works in Chrome (other browsers just switch the background-image instantly after configured interval)
 ```
  
 ###Options:
