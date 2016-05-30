@@ -6,7 +6,7 @@
 			var styles =
 "<style>\
 	.cf-container { position: relative; }\n\
-	.cf-container img {\n\
+	.cf-container img.cf {\n\
 		position: absolute;\n\
 		top: 0;\n\
 		left: 0;\n\
@@ -15,12 +15,12 @@
 		max-height: 100%;\n\
 		display: block;\n\
 	}\n\
-	.cf-container img.cf-base {\n\
+	.cf-container img.cf.cf-base {\n\
 		position: static;\n\
 		z-index: -1;\n\
 		visibility: hidden;\n\
 	}\n\
-	.cf-container img.cf-active {\n\
+	.cf-container img.cf.cf-active {\n\
 		z-index: 3;\n\
 	}\n\
 </style>";
@@ -40,12 +40,12 @@
 		return this.each(function() {
 			var cycler = $(this);
 			cycler.addClass('cf-container');
-			cycler.find('img:first').clone().prependTo(this).addClass('cf-base');
-			cycler.find('img:nth-child(2)').addClass('cf-active');
+			cycler.find('img.cf:first').clone().prependTo(this).addClass('cf-base');
+			cycler.find('img.cf:nth-child(2)').addClass('cf-active');
 
 			window.setInterval(function() {
 				var active = cycler.find('.cf-active');
-				var next = (active.next(':not(.cf-base)').length > 0 ? active.next(':not(.cf-base)') : cycler.find('img:not(.cf-base)').first());
+				var next = (active.next(':not(.cf-base)').length > 0 ? active.next(':not(.cf-base)') : cycler.find('img.cf:not(.cf-base)').first());
 				next.css('z-index', 2); // move the next image up the pile
 				active.fadeOut(settings.fading, function() { // fade out the top image
 					active.css('z-index', 1).show().removeClass('cf-active'); //reset the z-index and unhide the image
